@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>Teste Cliente Fiel</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<style>
+table{
+	width: 70%;
+	margin-left: 15%;
+}
+
+form{
+margin-left: 20%;
+margin-top: 0%;
+height:10px;
+}
+
+#botao{ text-align: center }
+
+
+</style>
+
+
+</head>
+<body>
+
+<nav>
+    <div class="nav-wrapper red lighten-1">
+      <a href="/" class="brand-logo">Teste Cliente Fiel</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down red lighten-1">
+        <li><a href="/cadastro/frases">Frases</a></li>
+        <li><a href="/cadastro/pacotesdeimagens">Pacotes de Imagens</a></li>
+        <li><a href="/">Início</a></li>
+      </ul>
+    </div>
+  </nav>
+
+	<h4><center>2. Manter Pacotes de Imagens</center></h4>
+
+<form action="salvapacote" method="post" id="formpacote" th:object="${pacoteobj}" class="col s12">
+
+	<div class="row">
+		<div class="input-fiel col s9" id="botao">
+			<input type="submit" value="Novo Pacote de Imagens" onclick="pacoteFunction()" class="waves-effect waves-light btn light-blue accent-3">
+		</div>
+	</div>
+	
+			<input type="hidden" name="nomePacote" id="nomeDigitado" th:field="*{nomePacote}">
+		
+</form> 
+
+<br/>
+
+	  <table >
+		<thead>
+			<tr>
+			<!-- <th>ID</th> -->
+			<th>Nome</th>
+			<th>Ação</th>
+			</tr>
+		</thead>
+
+		 <tr th:each="pacote : ${pacotes}">
+			<!--  <td th:text="${pacote.id}"></td>-->
+			<td th:text="${pacote.nomePacote}"></td>
+			<td><a th:href="@{/alterapacote/{idpacote}(idpacote=${pacote.idPacote})}">Alterar</a>/<a th:href="@{/removepacote/{idpacote}(idpacote=${pacote.idPacote})}">Excluir</a></td>
+			
+		</tr>
+
+	</table>
+
+<script type="text/javascript">
+function pacoteFunction(){
+	
+	var nome=prompt("Digite um nome para o pacote:");
+	 document.getElementById('nomeDigitado').value = nome;
+}
+
+</script>
+
+
+
+</body>
+</html>

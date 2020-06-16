@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>Teste Cliente Fiel</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<style>
+table{
+	width: 70%;
+	margin-left: 15%;
+}
+
+form{
+margin-left: 20%;
+margin-top: 0%;
+height:10px;
+}
+
+#botao{ text-align: center }
+
+
+</style>
+
+
+</head>
+<body>
+
+<nav>
+    <div class="nav-wrapper red lighten-1">
+      <a href="/" class="brand-logo">Teste Cliente Fiel</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down red lighten-1">
+        <li><a href="/cadastro/frases">Frases</a></li>
+        <li><a href="/cadastro/pacotesdeimagens">Pacotes de Imagens</a></li>
+        <li><a href="/">Início</a></li>
+      </ul>
+    </div>
+  </nav>
+
+	<h4><center>4. Manter Imagem</center></h4>
+
+
+  <form action="salvaimagem" method="post" id="formimagem" th:object="${imagemobj}" class="col s12" enctype="multipart/form-data">
+  
+ 	<div th:object="${pacoteobj}" >
+		<input type="hidden" name="idPacote" id="idPacote" th:field="*{idPacote}" readonly="readonly">
+	</div>
+	
+	<input type="hidden" name="id" id="id" th:field="*{id}">
+	
+	<div class="row">
+		<div class="input-fiel col s6">
+			<label for="file" class="active">Imagem:</label> 
+			<input multiple="multiple" type="file" id="file" name="file" class="active">
+		</div>
+	</div>
+
+	
+	<!-- <div class="row">
+		<div class="input-fiel col s9">
+			<label type="text" for="frase">Frase:</label>
+			<input type="text" name="frase" id="frase" th:field="*{frase}">
+		</div>
+	</div>	 -->
+	
+	<div class="row">
+		<div class="input-fiel col s9">
+			<label for="frase" class="active">Frase:</label> 
+		
+			<select class="browser-default" th:field="*{frase}" id="frase">
+    			<option th:each="f : ${frases}" th:value="${f.fraseDesc}" th:text="${f.fraseDesc}"></option>
+    		</select>
+   		</div>
+   </div>
+	
+	<div class="row">
+		<div class="input-fiel col s9">
+			<label type="text" for="fonte">Fonte:</label>
+			<input type="text" name="fonte" id="fonte" th:field="*{fonte}">
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="input-fiel col s9" id="botao">
+			<input type="submit" value="Salvar" class="waves-effect waves-light btn light-blue accent-3">
+		</div>
+	</div>	
+			
+</form> 
+
+
+
+<br/>
+
+</body>
+</html>

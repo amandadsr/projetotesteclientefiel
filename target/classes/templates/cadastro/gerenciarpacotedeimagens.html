@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>Teste Cliente Fiel</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<style>
+table{
+	width: 70%;
+	margin-left: 15%;
+}
+
+form{
+margin-left: 20%;
+margin-top: 0%;
+height:10px;
+}
+
+#botao{ text-align: center }
+
+
+</style>
+
+
+</head>
+<body>
+
+<nav>
+    <div class="nav-wrapper red lighten-1">
+      <a href="/" class="brand-logo">Teste Cliente Fiel</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down red lighten-1">
+        <li><a href="/cadastro/frases">Frases</a></li>
+        <li><a href="/cadastro/pacotesdeimagens">Pacotes de Imagens</a></li>
+        <li><a href="/">Início</a></li>
+      </ul>
+    </div>
+  </nav>
+
+	<h4><center>3. Detalhes Pacote de Imagens</center></h4>
+	
+<div class="col s12">
+	<form action="adicionaimagem" method="post" id="formpacote" th:object="${pacoteobj}" class="col s12">
+  
+		<div class="row">
+			<div class="input-fiel col s9">
+				<label type="text">Nome:</label>
+				<input type="text" id="nomePacote" name="nomePacote" th:field="*{nomePacote}" readonly="readonly">
+				<input type="hidden" id="idPacote" name="idPacote" th:field="*{idPacote}" readonly="readonly">
+			</div>
+		</div>	
+		
+		<div class="row">
+		<div class="input-fiel col s6" >
+			<input type="submit" value="Adicionar Imagem" class="waves-effect waves-light btn light-blue accent-3">
+		</div>
+		</div>
+		
+	</form> 
+
+	<!--  <form action="exportarimagem" method="post" id="formimagem" class="col s12">
+		<div class="row">
+		<div class="input-fiel col s6" >
+			<input type="submit" value="Exportar">
+		</div>
+		</div>
+	</form> 	-->
+	
+</div>
+	
+<br/>
+
+	 <table >
+		<thead>
+			<tr>
+			<th>Imagem</th>
+			<th>Frase</th>
+			<th>Ação</th>
+			</tr>
+		</thead>
+		
+		 <tr th:each="imagem : ${imagens}">
+		 <!-- <img src="data:image/jpeg;base64,${imagem.foto}" />
+		  <img th:src="*{'data:image/png;base64,'+ imagem.foto}" /> -->
+		 	<td>  <img src="${imagem.foto}"/></td>
+			<!-- <td th:text="${imagem.foto}"></td> -->
+			<td th:text="${imagem.frase}"></td>
+			  <td><a th:href="@{/editarimagem/{idimagem}(idimagem=${imagem.id})}">Editar</a>/<a th:href="@{/exportarimagem/{idimagem}(idimagem=${imagem.id})}">Exportar</a></td>
+			
+		</tr>
+
+	</table>
+
+
+</body>
+</html>

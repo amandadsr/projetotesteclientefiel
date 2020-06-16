@@ -1,0 +1,56 @@
+Teste Cliente Fiel
+
+O projeto consiste na implementação um sistema web que auxilia uma empresa que trabalha com a impressão de fotografias acompanhadas de uma frase ou verso de inspiração.
+
+Informações relevantes:
+O projeto foi elaborado através da linguaguem Java 8, utilizando a IDE Eclipse Spring Tools Suite 4.
+As tecnologias utilizadas foram: Spring Boot MVC, JPA, Thymeleaf, Materialize e Banco de Dados em memória - H2.
+
+
+- Instruções para funcionamento do projeto:
+
+1. Depois que efetuar o download e importar o projeto para a IDE, configure o application.properties da seguinte maneira, são principalmente as configurações do banco de dados em memória:
+
+spring.jpa.show-sql=true
+
+
+spring.h2.console.enabled=true
+#spring.h2.console.path=/h2
+
+spring.datasource.url=jdbc:h2:mem:testeclientefiel
+spring.datasource.username=sa
+spring.datasource.password=
+spring.datasource.driver-class-name=org.h2.Driver
+
+spring.jpa.database.platform=org.hibernate.dialect.H2Dialect
+
+spring.jpa.hibernate.ddl-auto=update
+
+spring.http.multipart.max-file-size=10MB
+spring.http.multipart.max-request-size=10MB
+
+2. Execute o projeto através no botão "Run".
+
+3. No navegador de sua preferência, digite: http://localhost:8080/
+
+4. Você deve clicar em "Frases" e cadastrar quantas frases desejar.
+
+5. Depois de cadastrar uma frase, você pode excluí-la e pode alterá-la, basta clicar nos links à frente da linha.
+
+6. Volte para a tela Inicial clicando em "Inicio".
+
+7. Clique em "Pacotes de Imagens", clique no botão "Novo Pacote de Imagens", dê um nome para o pacote e clique em salvar.
+Cadastre quantos pacotes desejar.
+
+8. Para adicionar imagens aos pacotes clique em "Alterar" na mesma linha do pacote. Você também tem a opção de excluí-lo clicando em "Excluir".
+
+9. Após clicar em "Alterar", clique no botão "Adicionar Imagem".
+
+10. Para selecionar as imagens que deseja adicionar, clique no botão "Browse..." e selecione quantas imagens quiser.
+
+11. Escolha uma frase dentre as cadastradas anteriormente, informe um número para tamanho da "Fonte" e clique em "Salvar".
+
+12. À frente, na mesma linha da imagem cadastrada é possível editar as informações da imagem clicando em "Editar".
+
+13. Para exportar uma imagem para um arquivo .pdf onde serão impressas 16 fotos e suas frases, clique no botão "Exportar" à frente na mesma linha da imagem cadastrada.
+

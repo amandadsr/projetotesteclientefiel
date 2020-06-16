@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="imagem" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a54f25ed-c27d-4559-9804-437819b885ec">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Coleção de Fotos teste Cliente Fiel"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="foto" class="byte[]">
+		<fieldDescription><![CDATA[foto]]></fieldDescription>
+	</field>
+	<field name="frase" class="java.lang.String">
+		<fieldDescription><![CDATA[frase]]></fieldDescription>
+	</field>
+	<field name="fonte" class="java.lang.Integer">
+		<fieldDescription><![CDATA[fonte]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="610" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="71" width="80" height="30" uuid="9be8d15e-94bd-4438-9e12-af45b58c1a5e"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="150" y="0" width="80" height="71" uuid="d6d8221d-6f5c-400a-95a2-a8dd8b067727"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="0" width="90" height="71" uuid="430e31a9-49e1-47a9-934a-b5c02b80ef05">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="300" y="0" width="80" height="71" uuid="70013857-6948-4676-82dc-d11ce727e3dd"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="452" y="0" width="80" height="71" uuid="8261713c-de33-4567-a893-40e9d3f2d48b"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="152" width="82" height="68" uuid="66f7ebf9-ba90-4cef-b41b-93d943a1ef7c"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="150" y="152" width="72" height="70" uuid="e1efc3af-6a93-4817-99f9-33a7e2b49d9a"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="300" y="152" width="80" height="68" uuid="29a86f8d-6048-4b47-8137-80db86d9cc4d"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="150" y="71" width="80" height="30" uuid="f1d30d78-1795-4e1d-bb2b-6e04d4b89934"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="71" width="80" height="30" uuid="e331858c-3f21-4efc-84b5-40755cbaf64e"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="450" y="151" width="80" height="71" uuid="08f4ffd6-9db8-474c-90d8-178d8616476b"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="300" y="290" width="80" height="71" uuid="ad817553-fcbd-4bba-bf32-f3b2a71fae01"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="452" y="290" width="80" height="71" uuid="cb88fd1c-2b99-4ddc-b794-f8e06d296a28"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="148" y="290" width="80" height="71" uuid="2f6b8750-b445-4201-bd86-3cf718128c36"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="303" y="450" width="80" height="71" uuid="e3f315fb-3702-48b4-8ed0-b9e26b3dde15"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="149" y="450" width="80" height="71" uuid="5c67771b-037f-4929-9d7b-321cdddadcf6"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="450" width="80" height="71" uuid="e36e2182-0bad-4343-9a9c-013eee49f609"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="290" width="80" height="71" uuid="d24b840c-e73e-450a-b85b-5869b4a55624"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="450" y="450" width="80" height="71" uuid="e5426e80-4b2e-4a6e-aa36-de2272d587b1"/>
+				<imageExpression><![CDATA[$F{foto}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="450" y="70" width="80" height="30" uuid="f0cfbbd5-2941-4455-a07f-3e1e6c13ea64"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="220" width="80" height="30" uuid="0feae50c-f080-4e74-ae66-e7605516cfc8"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="220" width="80" height="30" uuid="bcb7570e-dbc6-4f64-886e-8c5c8e1930a6"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="220" width="80" height="30" uuid="a0c55d0f-c09b-407a-b392-6ef5cb8b3bb8"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="220" width="80" height="30" uuid="f3462588-6970-40e2-adda-96c864376ab4"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="360" width="80" height="30" uuid="426fa93f-d5e6-4951-88c6-61d8bd8709aa"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="360" width="80" height="30" uuid="16bd2131-ab5d-4de9-9db7-5e1baa01a2ef"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="360" width="80" height="30" uuid="01bef406-c9db-435a-bb14-e5ba9fbe86ce"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="360" width="80" height="30" uuid="6a28039f-feca-48ca-9872-6e2d0899ed2f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="520" width="80" height="30" uuid="78dcd0cb-12ee-4ec8-9836-0942a080a3bd"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="148" y="520" width="80" height="30" uuid="f5192606-b90b-40e4-9b00-2e3cfb115f4f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="520" width="80" height="30" uuid="b137e246-1973-4f20-913e-c7481089efea"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="520" width="80" height="30" uuid="060aefd6-356e-4a7d-832e-81cea09ca469"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frase}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
